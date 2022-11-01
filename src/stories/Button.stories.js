@@ -1,6 +1,5 @@
 import WButton from '@tradesoft/war-ui/components/WButton';
 import { withDesign } from 'storybook-addon-designs';
-import {parameters} from '../../.storybook/preview';
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
@@ -12,7 +11,6 @@ export default {
     title: {
       type: String,
       required: false,
-      defaultValue: 'Кнопка',
     },
     rounded: {
       type: Boolean,
@@ -39,6 +37,10 @@ const Template = (args) => ({
 
 export const Accent = Template.bind({});
 
+Accent.args = {
+  title: 'Кнопка',
+};
+
 Accent.parameters = {
   design: {
     type: 'figma',
@@ -49,8 +51,6 @@ Accent.parameters = {
 export const Secondary = Template.bind({});
 export const Large = Template.bind({});
 export const Small = Template.bind({});
-
-
 
 Secondary.args = {
   title: 'test',
